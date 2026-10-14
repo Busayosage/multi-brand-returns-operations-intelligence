@@ -1,0 +1,47 @@
+# Credentials and local environments
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Source datasets and generated outputs
+data/raw/
+data/processed/
+Data/Raw/
+outputs/
+database/
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.jsonl
+*.log
+
+# Tableau binary workbooks and generated exports
+*.twbx
+*.hyper
+*.tde
+*.extract
+*.bak
+
+# Build/distribution
+build/
+dist/
+*.egg-info/
