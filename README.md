@@ -8,7 +8,7 @@
 
 Build a reusable analytical framework to evaluate retail transaction performance, investigate cancellation-marked records, design a returns/logistics intelligence layer, and identify measurable continuous improvement opportunities.
 
-**Source:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), a public retail transaction dataset. This is an independently developed portfolio, **not an employer or ReBound project**.
+**Source:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), a public retail transaction dataset. This is an independently developed portfolio project using public retail transaction data.
 
 ## Historical retail performance findings
 
