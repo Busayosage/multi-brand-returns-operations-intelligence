@@ -1,26 +1,38 @@
-# Project Status — 14 October 2026
+# Project Status — 16 October 2026
 
-## Verified in recovered files
-- Public UCI Online Retail II is the transaction source.
-- Five Python source scripts are recovered from the original project Drive folder; all have passed syntax compilation, **not a full dataset execution in this release**.
-- Data dictionary and a historical analytical checkpoint are available.
-- Tableau screenshots show a 1400×900 Retail Performance dashboard with navy navigation sidebar, four KPI comparisons, monthly merchandise-value trend, and pending legend/card styling. No Tableau workbook is committed yet.
+Independent portfolio: Multi-Brand Returns Operations Intelligence.
 
-## Historical reconciliation (not rerun for this publication)
-- 1,067,371 source rows; 22,523 matched cross-sheet overlap occurrences removed; 1,044,848 retained.
-- Full-scope reported net merchandise value: £18,981,261.52. Full-scope 39,516 eligible sales orders.
-- January–November comparison 2010 versus 2011: net merchandise £8,407,010.94 versus £8,591,018.46; AOV £477.31 versus £510.03; cancellation ratio 2.57% versus 3.23%; orders 18,077 versus 17,407.
-- Investigated a large cancellation-marked product 23166 transaction; reason and physical return status remain unknown.
+## Recovery milestone verified
+- Recovered the original retail_analytics.db from the user's compressed Google Drive upload.
+- SQLite PRAGMA quick_check returned ok; database opened in read-only mode.
+- source_transactions contains 1,044,848 rows.
+- Recomputed all eight aggregate measures in all 28 scopes of the saved validation_report.json (overall, 25 months, and two Jan–Nov scopes): 28/28 matched.
+- This verifies recovered database aggregates against the saved export report. It is not a fresh raw-workbook-to-database or CSV field-by-field validation.
+- Database SHA-256: d601c1c9630669c2c07847e885e5622cef6170468f6611728d366e1449416604.
+- Located 13 Python scripts, 14 SQL files, Tableau workbook versions, CSV export and supporting records in the uploaded project folder. Their presence does not mean every script or workbook has been rerun/reviewed.
 
-## Missing artifacts to recover
-- Local database `database/retail_analytics.db`.
-- Later `export_dashboard_data.py` and generated `dashboard_transactions.csv`, `kpi_reference.csv`, `validation_report.json`.
-- SQL views and Tableau workbook (`.twb`/`.twbx`).
+## Recomputed comparable January–November results
+| Metric | 2010 | 2011 |
+|---|---:|---:|
+| Gross merchandise value | £8,628,418.424 | £8,878,008.023 |
+| Cancellation-marked value | £221,407.480 | £286,989.560 |
+| Net merchandise value | £8,407,010.944 | £8,591,018.463 |
+| Eligible sales orders | 18,077 | 17,407 |
 
-## Next development milestones
-1. Recover and verify local SQL and Tableau export pipeline; ensure no raw data is committed.
-2. Finish Retail Performance Tableau styling, legends, navigation and interactivity.
-3. Build and validate a **synthetic**, clearly marked logistics enrichment layer and associated service metrics.
-4. Document root-cause and continuous improvement cases and maintain real-versus-simulated boundaries.
+Money stored as exact integers at scale 1000; round for presentation only.
+AOV uses gross merchandise value / eligible sales orders. Cancellation-marked activity is not proof of physical returns; net merchandise value is not profit.
 
-**Project ownership:** independent portfolio; an earlier interview inspired part of the scope but no employer data or affiliation is claimed.
+## Publication
+Part 1 published and verified on 15 October 2026:
+https://www.linkedin.com/feed/update/urn:li:activity:7516409731381374976/
+
+Further posts follow verified project milestones, not the expired Wednesday–Friday schedule.
+
+## Next milestones
+1. Review recovered cancellation SQL and Tableau calculations against this verified baseline; preserve reviewed-pair headline/sensitivity distinction.
+2. Finalise existing Retail Performance dashboard.
+3. Define and build a separately labelled synthetic logistics layer; validate links, dates, quantities and service metrics before presenting results.
+4. Develop evidence-led Pareto/root-cause investigations, process mapping and measurable continuous-improvement proposals. Keep hypotheses and simulated benefits explicit.
+5. Publish reviewed code/results to GitHub, then prepare Parts 2 and 3.
+
+Raw data, database, full CSV and private environment files are not committed to this repository.
