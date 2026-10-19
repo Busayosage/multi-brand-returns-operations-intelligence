@@ -8,7 +8,7 @@ Independent portfolio: Multi-Brand Returns Operations Intelligence.
 - [Live six-page Tableau Public showcase](https://public.tableau.com/app/profile/oluwasbusayomi.oseola/viz/Returns_Intelligence_20261019_Checked/RetailPerformance_).
 - Retail, country, customer, cancellation, synthetic logistics and improvement-roadmap views were opened and rendered in the desktop browser.
 - The 5,000-case logistics model is fictional and separate from observed transactions. The improvement controls remain proposals; no realised benefits or proven cancellation causes are claimed.
-- A 1 minute 50 second narrated video, including captions and captured dashboard views, was created and approved by the owner for LinkedIn publication. The public post URL will be recorded after publication.
+- A 1 minute 50 second narrated video, including captions and captured dashboard views, was created and approved by the owner for LinkedIn publication. Published Part 3: https://www.linkedin.com/feed/update/urn:li:activity:7517949641267658752/ (19 October 2026).
 - README and the Tableau guide now link the live workbook. Full downstream SQL/export code and the synthetic generator have not been added to this code release.
 - Phone layout and comprehensive tooltip/filter/reset acceptance testing remain outstanding.
 
