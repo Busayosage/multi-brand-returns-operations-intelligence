@@ -2,7 +2,9 @@
 
 **Independent portfolio project · Python · SQL · Tableau · Retail, Logistics & Continuous Improvement**
 
-> **Status: In development.** This first public release includes recovered data-quality scripts and project documentation. The completed Tableau workbook, later SQL export pipeline and synthetic logistics model are not yet included.
+> **Status: Tableau showcase published — 19 October 2026.** Explore six dashboard pages covering retail performance, country and customer concentration, cancellation exceptions, a separate synthetic logistics demonstration, and proposed improvement controls. The repository contains the recovered data-quality scripts and documentation; the full downstream SQL/export pipeline and logistics generator are not included in this code release.
+
+**[Open the interactive Tableau Public workbook](https://public.tableau.com/app/profile/oluwasbusayomi.oseola/viz/Returns_Intelligence_20261019_Checked/RetailPerformance_)**
 
 ## Project objective
 
@@ -10,9 +12,9 @@ Build a reusable analytical framework to evaluate retail transaction performance
 
 **Source:** [UCI Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii), a public retail transaction dataset. This is an independently developed portfolio project using public retail transaction data.
 
-## Historical retail performance findings
+## Validated retail performance findings
 
-Comparable January–November periods, from the previously documented Tableau/SQL reconciliation (not re-executed for this release):
+Comparable January–November periods. The recovered database aggregates were recomputed on 16 October 2026 and matched the saved validation report across all 28 scopes; this was not a fresh raw-workbook-to-database validation.
 
 | KPI | 2010 | 2011 |
 | --- | ---: | ---: |
@@ -28,7 +30,8 @@ Comparable January–November periods, from the previously documented Tableau/SQ
 - Five recovered Python scripts for cross-sheet occurrence matching, missing customer IDs, missing descriptions, price exceptions and transaction-pattern classification.
 - Source data dictionary, data methodology and progress notes.
 - A conservative `.gitignore` to exclude source workbooks, CSV/Parquet extracts, local databases, Tableau packaged workbooks, credentials and caches.
-- A development roadmap describing upcoming SQL, Tableau, logistics and continuous improvement stages.
+- A development roadmap and [Tableau guide](tableau/README.md) linking the published six-page workbook.
+- Clearly separated observed transaction findings, fictional logistics metrics, and proposed improvement controls.
 
 **Verification:** the five scripts passed Python syntax compilation; their complete execution against original data has not been rerun as part of this GitHub release. Do not treat missing downstream artifacts as completed.
 
@@ -46,9 +49,9 @@ Download the original workbook from UCI. The later scripts depend on audited out
 ## Roadmap
 
 1. **Retail Performance:** source profiling, validation, reconciled KPIs and polished Tableau dashboard.
-2. **Returns & Logistics:** examine cancellation exceptions and later add clearly labelled **synthetic** carrier, warehouse and SLA data.
+2. **Returns & Logistics:** published cancellation exception views and a separately labelled **synthetic** 5,000-case logistics demonstration; publish the reviewed generator and full reproduction workflow in a later code release.
 3. **Root Cause:** Pareto and exception investigations with evidence separate from hypotheses.
 4. **Continuous Improvement:** Lean process mapping, monitored recommendations and potential improvement scenarios.
-5. **Portfolio publishing:** tested reproducible SQL, Tableau Public dashboard, diagrams, and further case-study writeups.
+5. **Portfolio publishing:** Tableau Public showcase is live; extend the repository with reviewed SQL, downstream scripts and further reproducibility documentation.
 
 See [Project Status](docs/PROJECT_STATUS.md) for verified versus planned deliverables. No source data or private customer records are included in the repository.
