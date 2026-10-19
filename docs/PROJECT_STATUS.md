@@ -1,6 +1,16 @@
-# Project Status — 16 October 2026
+# Project Status — 19 October 2026
 
 Independent portfolio: Multi-Brand Returns Operations Intelligence.
+
+
+## Tableau publication and walkthrough — 19 October 2026
+
+- [Live six-page Tableau Public showcase](https://public.tableau.com/app/profile/oluwasbusayomi.oseola/viz/Returns_Intelligence_20261019_Checked/RetailPerformance_).
+- Retail, country, customer, cancellation, synthetic logistics and improvement-roadmap views were opened and rendered in the desktop browser.
+- The 5,000-case logistics model is fictional and separate from observed transactions. The improvement controls remain proposals; no realised benefits or proven cancellation causes are claimed.
+- A 1 minute 50 second narrated video, including captions and captured dashboard views, was created and approved by the owner for LinkedIn publication. The public post URL will be recorded after publication.
+- README and the Tableau guide now link the live workbook. Full downstream SQL/export code and the synthetic generator have not been added to this code release.
+- Phone layout and comprehensive tooltip/filter/reset acceptance testing remain outstanding.
 
 ## Recovery milestone verified
 - Recovered the original retail_analytics.db from the user's compressed Google Drive upload.
@@ -28,7 +38,7 @@ https://www.linkedin.com/feed/update/urn:li:activity:7516409731381374976/
 
 Further posts follow verified project milestones, not the expired Wednesday–Friday schedule.
 
-## Next milestones
+## Historical next milestones recorded on 16 October
 1. Review recovered cancellation SQL and Tableau calculations against this verified baseline; preserve reviewed-pair headline/sensitivity distinction.
 2. Finalise existing Retail Performance dashboard.
 3. Define and build a separately labelled synthetic logistics layer; validate links, dates, quantities and service metrics before presenting results.
