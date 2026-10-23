@@ -1,3 +1,13 @@
+# Current checkpoint — 23 October 2026 review branch
+
+The dashboard, narrated video and all three LinkedIn posts were published by 19 October. This branch completes the recovered data reproduction package: fourteen analytical scripts plus runner/verifier, fifteen SQL files, exact environment versions and a tested workflow. A clean raw-workbook rebuild passed all stages; exported transaction/reference CSVs and all 28 saved KPI scopes match. Five existing tests pass with source data. See [reproduction](REPRODUCTION.md), [verification](VERIFICATION_2026-10-23.md) and [Tableau QA](TABLEAU_QA_2026-10-23.md).
+
+Desktop QA confirms six pages load and representative tooltips/selection work, with text clipping and tooltip precision defects recorded. Actual narrow/mobile testing remains unverified because the review browser cannot resize/emulate. No authored phone layouts or quick filters were present in the published dashboards; these are unimplemented features. Main, live Tableau and LinkedIn were not changed in this phase. The review branch must be reviewed before merge; any live presentation correction is a separate phase using the saved backup.
+
+---
+
+## Preserved earlier status record
+
 # Project Status — 19 October 2026
 
 Independent portfolio: Multi-Brand Returns Operations Intelligence.

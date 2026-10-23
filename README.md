@@ -2,7 +2,7 @@
 
 **Independent portfolio project · Python · SQL · Tableau · Retail, Logistics & Continuous Improvement**
 
-> **Status: Tableau showcase published — 19 October 2026.** Explore six dashboard pages covering retail performance, country and customer concentration, cancellation exceptions, a separate synthetic logistics demonstration, and proposed improvement controls. The repository contains the recovered data-quality scripts and documentation; the full downstream SQL/export pipeline and logistics generator are not included in this code release.
+> **Status: Tableau showcase published — 19 October 2026.** Explore six dashboard pages covering retail performance, country and customer concentration, cancellation exceptions, a separate synthetic logistics demonstration, and proposed improvement controls. This review branch recovers the downstream pipeline and documents an isolated rebuild; see the dated verification report for actual test results and limitations. The synthetic generator was already present in the Part 2 release.
 
 **[Open the interactive Tableau Public workbook](https://public.tableau.com/app/profile/oluwasbusayomi.oseola/viz/Returns_Intelligence_20261019_Checked/RetailPerformance_)**
 
@@ -14,7 +14,7 @@ Build a reusable analytical framework to evaluate retail transaction performance
 
 ## Validated retail performance findings
 
-Comparable January–November periods. The recovered database aggregates were recomputed on 16 October 2026 and matched the saved validation report across all 28 scopes; this was not a fresh raw-workbook-to-database validation.
+Comparable January–November periods. A clean raw-workbook rebuild on 23 October 2026 passed all fourteen stages. All 28 saved KPI scopes matched, and the dashboard transaction and KPI reference CSVs matched the saved checksums byte for byte. See the dated verification report for failed recovery attempts and platform limits.
 
 | KPI | 2010 | 2011 |
 | --- | ---: | ---: |
@@ -25,33 +25,28 @@ Comparable January–November periods. The recovered database aggregates were re
 
 **Analytical question:** Why did recorded net merchandise value increase by ~2.2% while sales orders decreased by ~3.7%? A cancellation prefix is not proof of a physical return; net merchandise value is not profit.
 
-## What is included
+## Reproduction package
 
-- Five recovered Python scripts for cross-sheet occurrence matching, missing customer IDs, missing descriptions, price exceptions and transaction-pattern classification.
-- Source data dictionary, data methodology and progress notes.
-- A conservative `.gitignore` to exclude source workbooks, CSV/Parquet extracts, local databases, Tableau packaged workbooks, credentials and caches.
-- A development roadmap and [Tableau guide](tableau/README.md) linking the published six-page workbook.
-- Clearly separated observed transaction findings, fictional logistics metrics, and proposed improvement controls.
+- Fourteen recovered analytical Python scripts, plus a portable orchestrator and verifier.
+- Fifteen reviewed read-only SQL files (03–17), KPI policy, source dictionary and Part 2 tests.
+- Explicit source acquisition, dependency versions, intermediate files and execution order in [Reproduction](docs/REPRODUCTION.md).
+- [Verification evidence](docs/VERIFICATION_2026-10-23.md) and [published Tableau QA](docs/TABLEAU_QA_2026-10-23.md), with failures and unverified items identified.
+- No raw extracts, database, credentials, customer-level outputs or packaged Tableau workbooks. Generated outputs stay local; the live workbook is linked above.
 
-**Verification:** the five scripts passed Python syntax compilation; their complete execution against original data has not been rerun as part of this GitHub release. Do not treat missing downstream artifacts as completed.
-
-## Reproduction
+Download the original two-sheet workbook from UCI, create a fresh Python 3.12 environment and install `requirements-verified.txt`. Then run:
 
 ```bash
-python -m venv .venv
-# Activate the environment for your system
-pip install -r requirements.txt
-python src/resolve_cross_sheet_duplicates.py --input "Data/Raw/online_retail_II.xlsx" --output outputs
+python src/reproduce.py --input Data/Raw/online_retail_II.xlsx --run-dir /tmp/returns-reproduction-new
 ```
 
-Download the original workbook from UCI. The later scripts depend on audited outputs and companion summary JSON files from previous processing stages; select the appropriate input with `--input` rather than inventing earlier data.
+Use a **new local directory outside cloud sync** for SQLite. The guide provides Windows instructions, every stage dependency and the follow-up validation command. This rebuild produces data, SQL results and fictional logistics inputs; Tableau's manually corrected presentation is a separate artifact.
 
 ## Roadmap
 
 1. **Retail Performance:** source profiling, validation, reconciled KPIs and polished Tableau dashboard.
-2. **Returns & Logistics:** published cancellation exception views and a separately labelled **synthetic** 5,000-case logistics demonstration; publish the reviewed generator and full reproduction workflow in a later code release.
+2. **Returns & Logistics:** published cancellation exception views and a separately labelled **synthetic** 5,000-case logistics demonstration; generator and complete downstream workflow recovered on this review branch.
 3. **Root Cause:** Pareto and exception investigations with evidence separate from hypotheses.
 4. **Continuous Improvement:** Lean process mapping, monitored recommendations and potential improvement scenarios.
-5. **Portfolio publishing:** Tableau Public showcase is live; extend the repository with reviewed SQL, downstream scripts and further reproducibility documentation.
+5. **Portfolio publishing:** Tableau Public showcase is live; review this branch and resolve the recorded presentation limitations before any separate live-workbook correction.
 
 See [Project Status](docs/PROJECT_STATUS.md) for verified versus planned deliverables. No source data or private customer records are included in the repository.
