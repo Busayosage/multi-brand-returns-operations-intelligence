@@ -20,8 +20,9 @@ Use Python 3.12; the recorded test uses 3.12.14. Dependencies are pandas, openpy
 python -m venv .venv
 # Linux/macOS
 .venv/bin/python -m pip install -r requirements-verified.txt
-.venv/bin/python src/reproduce.py --input Data/Raw/online_retail_II.xlsx --run-dir outputs/reproduction-new
-# Windows PowerShell: use .venv\Scripts\python.exe for the same commands
+.venv/bin/python src/reproduce.py --input Data/Raw/online_retail_II.xlsx --run-dir /tmp/returns-reproduction-new
+# Windows PowerShell: use .venv\Scripts\python.exe and replace /tmp/returns-reproduction-new
+# with a new local path such as C:\Temp\returns-reproduction-new, outside OneDrive/cloud sync
 ```
 
 `--run-dir` must not exist. All stages run in separate processes using that environment, with explicit paths, no network access and no overwrite of an existing database. The orchestrator records a stage log, exit code and timing, and stops on the first failure. Do not use a failed directory as the validated result or rename it to hide a failed run. Fix the problem and run into a new directory. Timestamped folders and absolute paths make audit JSON/checksums differ between runs; analytical values and source fields are the comparison targets, not byte identity of every metadata file.
@@ -53,7 +54,7 @@ The accounting correction changes three classification cells on exactly one revi
 
 ## SQL analysis after import
 
-Run `python src/verify_reproduction.py --run-dir outputs/reproduction-new --saved-validation PATH_TO_RECOVERED_VALIDATION_JSON` to execute all reviewed queries and compare the export with the saved baseline when that local evidence is available. Omit `--saved-validation` if independently reproducing without private Drive access; reference constants and the export's internal reconciliation are still checked. Optional `--expected-synthetic PATH_TO_RECOVERED_SYNTHETIC_CSV` checks exact generator output bytes.
+Run `python src/verify_reproduction.py --run-dir /tmp/returns-reproduction-new --saved-validation PATH_TO_RECOVERED_VALIDATION_JSON` to execute all reviewed queries and compare the export with the saved baseline when that local evidence is available. Omit `--saved-validation` if independently reproducing without private Drive access; reference constants and the export's internal reconciliation are still checked. Optional `--expected-synthetic PATH_TO_RECOVERED_SYNTHETIC_CSV` checks exact generator output bytes.
 
 SQL 03–17 are independent read-only analytical queries over the imported database, not database migrations. Numeric order is a useful review narrative: 03 monthly KPIs; 04 year-on-year months; 05 Jan–Nov totals; 06 cancellation ratio; 07 product concentration; 08–09 source-record inspection; 10 both-record sensitivity; 11–12 country and reconciliation; 13–14 Australia customer detail; 15–16 EIRE detail; 17 combined cancellation checks. SQL 17 has four statements, so do not run it using a single-statement-only API. No SQL 01/02 was recovered or required: the importer creates tables, views and indexes. SQL uses integer thousandths of GBP and the verifier rejects any other money scale. Detailed query output remains local and ignored.
 
@@ -72,7 +73,7 @@ SQL 03–17 are independent read-only analytical queries over the imported datab
 Run existing tests with the rebuilt database:
 
 ```bash
-PART2_DB=outputs/reproduction-new/database/retail_analytics.db .venv/bin/python -m unittest discover -s tests -v
+PART2_DB=/tmp/returns-reproduction-new/database/retail_analytics.db .venv/bin/python -m unittest discover -s tests -v
 ```
 
 In PowerShell, set `$env:PART2_DB` to the same path before running unittest. The test suite otherwise skips the data-backed test; a skipped test is not a pass on source data.

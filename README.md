@@ -14,7 +14,7 @@ Build a reusable analytical framework to evaluate retail transaction performance
 
 ## Validated retail performance findings
 
-Comparable January–November periods. The recovered database aggregates were recomputed on 16 October 2026 and matched the saved validation report across all 28 scopes; this was not a fresh raw-workbook-to-database validation.
+Comparable January–November periods. A clean raw-workbook rebuild on 23 October 2026 passed all fourteen stages. All 28 saved KPI scopes matched, and the dashboard transaction and KPI reference CSVs matched the saved checksums byte for byte. See the dated verification report for failed recovery attempts and platform limits.
 
 | KPI | 2010 | 2011 |
 | --- | ---: | ---: |
