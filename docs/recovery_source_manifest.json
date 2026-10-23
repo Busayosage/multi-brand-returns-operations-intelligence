@@ -1,0 +1,147 @@
+[
+  {
+    "path": "src/build_quality_review.py",
+    "drive_sha256": "28452013100db1f35de20a460e8f334d525b36b4db2b60d211c80aaf49e66ff9",
+    "github": "missing"
+  },
+  {
+    "path": "src/calculate_kpis.py",
+    "drive_sha256": "b8fb43422c97a44bbc55608bf55336f02c9b9247d5d58dc5890f92b8e352edcf",
+    "github": "missing"
+  },
+  {
+    "path": "src/classify_stock_codes.py",
+    "drive_sha256": "c5daba2b5173ad11877c317d33ed1347a833af8899db2f5d4396d9a918fa5ab6",
+    "github": "missing"
+  },
+  {
+    "path": "src/classify_transaction_patterns.py",
+    "drive_sha256": "1f31f973a6549b126c8af88fa1dc802b7fffdde626ab691ceefe001ab0b8a5f7",
+    "github": "identical"
+  },
+  {
+    "path": "src/correct_bad_debt_classification.py",
+    "drive_sha256": "4625c95a0c23bd82f777e08139972296b764ed010aaeef8fcd8e4f750b9ab945",
+    "github": "missing"
+  },
+  {
+    "path": "src/define_kpi_eligibility.py",
+    "drive_sha256": "f4c54884935a0e5a33aace5b42dde9ae85b7a93417a9fe047da54a0e57a9c921",
+    "github": "missing"
+  },
+  {
+    "path": "src/export_dashboard_data.py",
+    "drive_sha256": "be00c729687779d94ffe57ddb3dbfa52d58b3c51c646e20f95a1926c8a0641ca",
+    "github": "missing"
+  },
+  {
+    "path": "src/flag_missing_customer_ids.py",
+    "drive_sha256": "b3683d098c80d2be4bb5c0842211e75f889729340cafe3a2f20067f1ec48aa29",
+    "github": "identical"
+  },
+  {
+    "path": "src/flag_missing_descriptions.py",
+    "drive_sha256": "19500e592010eb986641ff0bcc2021ff2e44865a1d150bfa69e4baf2570bdcb3",
+    "github": "identical"
+  },
+  {
+    "path": "src/flag_price_exceptions.py",
+    "drive_sha256": "18bd8d996cc289cdcacdc12bcf24c23d09ced52a729fa2405518f20345f9c8c7",
+    "github": "identical"
+  },
+  {
+    "path": "src/import_to_sqlite.py",
+    "drive_sha256": "f3f012a54533d78937b401d945c200904d477788bd7ed226ea65b63f4e363601",
+    "github": "missing"
+  },
+  {
+    "path": "src/part2_returns_intelligence.py",
+    "drive_sha256": "608af43de85541d4222fcdd390e03571bfc5082c19ac726724d746f92975b3b9",
+    "github": "identical"
+  },
+  {
+    "path": "src/resolve_cross_sheet_duplicates.py",
+    "drive_sha256": "b0fabda5a31fcbdb47e4da45906c2bf5cb47542547b9d72db9ebf344b49e9985",
+    "github": "identical"
+  },
+  {
+    "path": "src/review_invoice_keys.py",
+    "drive_sha256": "e7fc4b7d193a8912ffde56f503c0944681006affe32dd4d1129a3ac5516db72c",
+    "github": "missing"
+  },
+  {
+    "path": "sql/03_monthly_kpis.sql",
+    "drive_sha256": "3e55208a72b0351154618a954293cca543c7ad82b8e4b4e6718da777e3d116a8",
+    "github": "missing"
+  },
+  {
+    "path": "sql/04_monthly_year_on_year.sql",
+    "drive_sha256": "bc93e98c67058062ccdf429ff530a32e8b5a2505e224144bc7295cf8d8b4e613",
+    "github": "missing"
+  },
+  {
+    "path": "sql/05_jan_nov_year_comparison.sql",
+    "drive_sha256": "612f28b43bf2ff811eb6cb4e8558f7ddb063642a165f518142e0f6511591584e",
+    "github": "missing"
+  },
+  {
+    "path": "sql/06_cancellation_value_ratio.sql",
+    "drive_sha256": "9e2d787735776cd37902341dc6759c7c1b683ca9aa77b1955645c54e7487a911",
+    "github": "missing"
+  },
+  {
+    "path": "sql/07_top_cancellation_products_2011.sql",
+    "drive_sha256": "a9016e255f4ed124c761392dae3e09217c7fa7917c3e1b35c3e6e24f611286c0",
+    "github": "missing"
+  },
+  {
+    "path": "sql/08_review_stock_23166_cancellations.sql",
+    "drive_sha256": "810ba8d2dc394bd0f6e816a16c6c05fa8470f66895555b3cfe06b9aa14bc15ce",
+    "github": "missing"
+  },
+  {
+    "path": "sql/09_review_customer_12346_stock_23166.sql",
+    "drive_sha256": "76c64dc9aaa76646d7453089dcb606c8aabe5e5aced356f06d37c8b89175fe2c",
+    "github": "missing"
+  },
+  {
+    "path": "sql/10_cancellation_pair_sensitivity.sql",
+    "drive_sha256": "d71aae5d69f68959be464830ac52455d0f3b0a8f408c7951a2399e66ad4a7109",
+    "github": "missing"
+  },
+  {
+    "path": "sql/11_country_year_comparison.sql",
+    "drive_sha256": "b81ea64d7de3398a219b4b578f45007efbec3a9498885edfa0a161c5f4fae559",
+    "github": "missing"
+  },
+  {
+    "path": "sql/12_country_reconciliation.sql",
+    "drive_sha256": "df8dbdf68226bc4b96b3cf32751a149b9422992a48f0d833f7c99fec779bfc57",
+    "github": "missing"
+  },
+  {
+    "path": "sql/13_australia_customer_comparison.sql",
+    "drive_sha256": "453b0efc26c53e484199e7030ff762cf8cccce97d17929ff9353e63ca4d8a75f",
+    "github": "missing"
+  },
+  {
+    "path": "sql/14_customer_12415_monthly_pattern.sql",
+    "drive_sha256": "77ee28a522927fe8020cdd3cd8e6e6e3de8f87e3bdd72f5bcc54fde0c857f381",
+    "github": "missing"
+  },
+  {
+    "path": "sql/15_eire_customer_comparison.sql",
+    "drive_sha256": "9549de0acec8fc4518bf623df4436d7ca2042e4b8300381557f7649cdd8cc4a1",
+    "github": "missing"
+  },
+  {
+    "path": "sql/16_eire_key_customer_drivers.sql",
+    "drive_sha256": "62698eeec3bfa00a806cd84ef657f5729742354e2c7dfff79c5aaefe5f0b5068",
+    "github": "missing"
+  },
+  {
+    "path": "sql/17_cancellation_exception_intelligence.sql",
+    "drive_sha256": "4a47fc5c8e71ffe722fb74688850a03ac0c6140753c1ec29d4c1ac62d7563e5c",
+    "github": "identical"
+  }
+]

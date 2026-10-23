@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-23",
+  "status": "PASS",
+  "input_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "database_sha256": "8203715befdc7579395a8a956af32c604c5f4100796642f39453a5e86ab3efae",
+  "input_unchanged": true,
+  "stages": [
+    {
+      "stage": "resolve_cross_sheet_duplicates",
+      "exit_code": 0,
+      "elapsed_seconds": 54.59
+    },
+    {
+      "stage": "flag_missing_customer_ids",
+      "exit_code": 0,
+      "elapsed_seconds": 9.5
+    },
+    {
+      "stage": "flag_missing_descriptions",
+      "exit_code": 0,
+      "elapsed_seconds": 8.92
+    },
+    {
+      "stage": "flag_price_exceptions",
+      "exit_code": 0,
+      "elapsed_seconds": 11.08
+    },
+    {
+      "stage": "classify_transaction_patterns",
+      "exit_code": 0,
+      "elapsed_seconds": 11.97
+    },
+    {
+      "stage": "correct_bad_debt_classification",
+      "exit_code": 0,
+      "elapsed_seconds": 13.84
+    },
+    {
+      "stage": "classify_stock_codes",
+      "exit_code": 0,
+      "elapsed_seconds": 16.21
+    },
+    {
+      "stage": "build_quality_review",
+      "exit_code": 0,
+      "elapsed_seconds": 12.8
+    },
+    {
+      "stage": "define_kpi_eligibility",
+      "exit_code": 0,
+      "elapsed_seconds": 23.22
+    },
+    {
+      "stage": "calculate_kpis",
+      "exit_code": 0,
+      "elapsed_seconds": 16.08
+    },
+    {
+      "stage": "review_invoice_keys",
+      "exit_code": 0,
+      "elapsed_seconds": 13.75
+    },
+    {
+      "stage": "import_to_sqlite",
+      "exit_code": 0,
+      "elapsed_seconds": 41.37
+    },
+    {
+      "stage": "export_dashboard_data",
+      "exit_code": 0,
+      "elapsed_seconds": 48.99
+    },
+    {
+      "stage": "part2_returns_intelligence",
+      "exit_code": 0,
+      "elapsed_seconds": 2.25
+    }
+  ],
+  "checks": [
+    {
+      "name": "All 14 pipeline stages passed",
+      "pass": true
+    },
+    {
+      "name": "SQLite integrity",
+      "pass": true
+    },
+    {
+      "name": "Foreign keys",
+      "pass": true
+    },
+    {
+      "name": "Money scale is thousandths GBP",
+      "pass": true
+    },
+    {
+      "name": "Retained source rows",
+      "pass": true
+    },
+    {
+      "name": "2010 exact headline numerators and orders",
+      "pass": true
+    },
+    {
+      "name": "2011 exact headline numerators and orders",
+      "pass": true
+    },
+    {
+      "name": "All 15 SQL files / 18 statements executed",
+      "pass": true
+    },
+    {
+      "name": "Both-record sensitivity 2.38%; headline 3.23%; net unchanged",
+      "pass": true
+    },
+    {
+      "name": "Country changes",
+      "pass": true
+    },
+    {
+      "name": "Product 23166 cancellation value",
+      "pass": true
+    },
+    {
+      "name": "Database unchanged by verification",
+      "pass": true
+    },
+    {
+      "name": "Export all-field readback and 28-scope internal reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Eight measures in all 28 saved scopes",
+      "pass": true
+    },
+    {
+      "name": "Saved eligibility counts",
+      "pass": true
+    },
+    {
+      "name": "Saved byte checksum: dashboard_transactions.csv",
+      "pass": true
+    },
+    {
+      "name": "Saved byte checksum: kpi_reference.csv",
+      "pass": true
+    },
+    {
+      "name": "Synthetic baseline",
+      "pass": true
+    },
+    {
+      "name": "Synthetic late cases",
+      "pass": true
+    },
+    {
+      "name": "Synthetic CSV exact recovered bytes",
+      "pass": true
+    }
+  ],
+  "sql_statement_row_counts": {
+    "03_monthly_kpis.sql": [
+      25
+    ],
+    "04_monthly_year_on_year.sql": [
+      11
+    ],
+    "05_jan_nov_year_comparison.sql": [
+      2
+    ],
+    "06_cancellation_value_ratio.sql": [
+      2
+    ],
+    "07_top_cancellation_products_2011.sql": [
+      10
+    ],
+    "08_review_stock_23166_cancellations.sql": [
+      10
+    ],
+    "09_review_customer_12346_stock_23166.sql": [
+      2
+    ],
+    "10_cancellation_pair_sensitivity.sql": [
+      2
+    ],
+    "11_country_year_comparison.sql": [
+      43
+    ],
+    "12_country_reconciliation.sql": [
+      1
+    ],
+    "13_australia_customer_comparison.sql": [
+      15
+    ],
+    "14_customer_12415_monthly_pattern.sql": [
+      22
+    ],
+    "15_eire_customer_comparison.sql": [
+      4
+    ],
+    "16_eire_key_customer_drivers.sql": [
+      4
+    ],
+    "17_cancellation_exception_intelligence.sql": [
+      2,
+      2,
+      10,
+      2
+    ]
+  },
+  "export_sha256": {
+    "dashboard_transactions.csv": "cd353f83e7bb91ec217b07d84042f2a4d3057d4de278049de7257242a0a3a145",
+    "kpi_reference.csv": "fc76f0b19c5a35f1ccb01779d3d92b0d34868e3392c27c099009e991f62647f8",
+    "README_dashboard.md": "999fda1819224f1ed8cff8dae780ba4bb3207e59f637574ec0710926c38c4665"
+  }
+}

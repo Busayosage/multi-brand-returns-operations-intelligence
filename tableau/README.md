@@ -24,3 +24,8 @@ The tabs may appear in a different order in the published workbook.
 ## Files and review scope
 
 The public link is the primary portfolio entry point. Packaged workbooks and embedded extracts are not committed to this repository. Dashboard views were checked in the desktop browser; comprehensive phone layout and filter/tooltip/reset testing have not been certified. Some notes represent the fixed comparison baseline.
+
+
+## 23 October read-only QA
+
+See [desktop findings and mobile limits](../docs/TABLEAU_QA_2026-10-23.md) and the [rebuild guide](../docs/REPRODUCTION.md). Six pages load; clipping and tooltip precision issues remain. Narrow/touch acceptance is not certified. A new backup was saved before any correction; no live changes were made.
